@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "560305089917",
+    "project_id": "mountain-travel-aa18e",
+    "storage_bucket": "mountain-travel-aa18e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560305089917:android:f846302caabd737df3b014",
+        "android_client_info": {
+          "package_name": "com.example.mountaintravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560305089917-8k3bcsnpb6ld6l66tkvq4mvi1v9u5opc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mountaintravel",
+            "certificate_hash": "97e37274a697bb902727b4590c83d52ff6255111"
+          }
+        },
+        {
+          "client_id": "560305089917-8o03lnro2qe91atfd39krmlgdl6iuutb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGR9dWiHyIsdvimA3uuxhDh-T6rV9iuJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560305089917-8o03lnro2qe91atfd39krmlgdl6iuutb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

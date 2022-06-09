@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Mountain Travel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="mountain_name">
+        <item>Gunung Sumeru</item>
+        <item>Gunung Abang</item>
+        <item>Gunung Agung</item>
+        <item>Gunung Batur</item>
+        <item>Gunung Batukaru</item>
+        <item>Gunung Merbuk</item>
+        <item>Gunung Catur</item>
+        <item>Gunung Sangyang</item>
+        <item>Gunung Pohen</item>
+        <item>Gunung Tapak</item>
+    </string-array>
+
+    <integer-array name="mountain_img">
+        <item>@drawable/gunung_sumeru</item>
+        <item>@drawable/gunung_abang</item>
+        <item>@drawable/gunung_agung</item>
+        <item>@drawable/gunung_batur</item>
+        <item>@drawable/gunung_merbuk</item>
+        <item>@drawable/gunung_tapak</item>
+        <item>@drawable/gunung_pohen</item>
+        <item>@drawable/gunung_sangyang</item>
+        <item>@drawable/gunung_catur</item>
+        <item>@drawable/gunung_batukaru</item>
+
+    </integer-array>
+</resources>
