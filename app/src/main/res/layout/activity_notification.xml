@@ -7,5 +7,31 @@
     tools:context=".main.NotificationActivity">
 
 
+    <FrameLayout
+        android:layout_width="384dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_curent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="47dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_notif_grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:text="You have succesfully planned your next trip"
+            android:textColor="@color/black">
+
+        </TextView>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

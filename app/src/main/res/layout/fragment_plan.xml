@@ -41,4 +41,170 @@
             android:src="@drawable/ic_search"/>
     </FrameLayout>
 
+    <FrameLayout
+        android:id="@+id/curent_plan"
+        android:layout_width="185dp"
+        android:layout_height="92dp"
+        android:background="@drawable/background_curent"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Gunung Gede "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:gravity="bottom"
+            android:text="Jawa barat" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="185dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/background_curent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/curent_plan"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <TextView
+            android:id="@+id/text_gunung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Gunung Sumeru "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:gravity="bottom"
+            android:text="Jawa barat" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_curent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Your Current Plan"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/text_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="238dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Your Previous Hiking Trip"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+
+    <FrameLayout
+        android:id="@+id/ll_3"
+        android:layout_width="185dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_curent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_previous">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Gunung Agung"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:gravity="bottom"
+            android:text="Jawa barat" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_4"
+        android:layout_width="185dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/background_curent"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_3"
+        app:layout_constraintStart_toEndOf="@+id/ll_3"
+        app:layout_constraintTop_toTopOf="@+id/ll_3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Gunung Gede "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:gravity="bottom"
+            android:text="Jawa barat" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_liketrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/like_trip"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_mountain"
+        android:layout_width="409dp"
+        android:layout_height="307dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_liketrip" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

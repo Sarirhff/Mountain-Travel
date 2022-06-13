@@ -2,6 +2,9 @@
     <string name="app_name">Mountain Travel</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">Description</string>
+    <string name="sign_out">Logout Successful</string>
+    <string name="like_trip">You might like this trip</string>
 
     <string-array name="mountain_name">
         <item>Gunung Sumeru</item>

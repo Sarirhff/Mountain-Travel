@@ -82,15 +82,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pop_mountain" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_artikel"
-        android:layout_width="0dp"
+
+    <ImageView
+        android:id="@+id/img_bestspot"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_popular"
+        app:srcCompat="@drawable/best_spot" />
+
+    <TextView
+        android:id="@+id/bestspot_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Spot To See"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_bestspot"
+        app:layout_constraintEnd_toEndOf="@+id/img_bestspot"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="@+id/img_bestspot"
+        app:layout_constraintTop_toTopOf="@+id/img_bestspot"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <ImageView
+        android:id="@+id/img_articel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_bestspot"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/articel" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Articel"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/img_articel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_bestspot"
+        app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

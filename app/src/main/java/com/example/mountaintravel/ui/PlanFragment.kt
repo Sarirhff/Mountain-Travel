@@ -1,60 +1,69 @@
 package com.example.mountaintravel.ui
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.mountaintravel.R
+import com.example.mountaintravel.databinding.FragmentHomeBinding
+import com.example.mountaintravel.databinding.FragmentPlanBinding
+import com.example.mountaintravel.main.DetailMountains
+import com.example.mountaintravel.main.Mountain
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [PlanFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class PlanFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var rvTrip: RecyclerView
+    private val list = ArrayList<Mountain>()
+    private var dbinding: FragmentPlanBinding? = null
+    private val binding get() = dbinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_plan, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PlanFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PlanFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        rvTrip = view.findViewById(R.id.rv_mountain)
+        rvTrip.setHasFixedSize(true)
+        list.addAll(listTripMountain)
+        setShowRecycleview()
+
+    }
+    private val listTripMountain: ArrayList<Mountain>
+        @SuppressLint("Recycle")
+        get(){
+            val dataName = resources.getStringArray(R.array.mountain_name)
+            val dataImg = resources.obtainTypedArray(R.array.mountain_img)
+            val listMount = ArrayList<Mountain>()
+            for (i in dataName.indices) {
+                val mountain = Mountain(dataName[i], dataImg.getResourceId(i, -1))
+                listMount.add(mountain)
             }
+            return listMount
+        }
+
+    private fun setShowRecycleview() {
+        rvTrip.layoutManager = LinearLayoutManager(context,
+            LinearLayoutManager.HORIZONTAL, false)
+
+        val listMountainAdapter = MountainAdapter(list)
+        rvTrip.adapter = listMountainAdapter
+
+        listMountainAdapter.setOnItemClickCallback(object : MountainAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: Mountain) {
+                val infoDetail = Intent(requireContext(), DetailMountains::class.java)
+                infoDetail.putExtra("DATA", data)
+                startActivity(infoDetail)
+            }
+        })
     }
 }

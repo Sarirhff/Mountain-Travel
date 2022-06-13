@@ -28,6 +28,7 @@ class MountainAdapter(val listMountain: ArrayList<Mountain>): RecyclerView.Adapt
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MountainAdapter.ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.card_view, parent, false)
         return ListViewHolder(view)
+
     }
     override fun onBindViewHolder(holder: MountainAdapter.ListViewHolder, position: Int) {
         val (name, image) = listMountain[position]
